@@ -8,7 +8,9 @@ function App() {
   const [allNotes, setAllNotes] = useState();
 
   const loadNotes = async () => {
-    const response = await axios.get("http://localhost:5000/note/get-note");
+    const response = await axios.get(
+      "http://ec2-52-15-73-37.us-east-2.compute.amazonaws.com:5000/note/get-note"
+    );
     if (response.data) setAllNotes(response.data.data);
   };
   useEffect(() => {

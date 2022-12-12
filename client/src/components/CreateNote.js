@@ -5,10 +5,13 @@ function CreateNode({ setAddNoteVisiblity }) {
   const [noteHeading, setNoteHeading] = useState("");
   const [noteContent, setNoteContent] = useState("");
   const addNote = async () => {
-    const response = await axios.post("http://localhost:5000/note/add-note", {
-      heading: noteHeading,
-      note: noteContent,
-    });
+    const response = await axios.post(
+      "http://ec2-52-15-73-37.us-east-2.compute.amazonaws.com:5000/note/add-note",
+      {
+        heading: noteHeading,
+        note: noteContent,
+      }
+    );
   };
   return (
     <div className="ml-20 w-10/12">

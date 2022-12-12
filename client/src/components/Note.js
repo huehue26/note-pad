@@ -6,7 +6,7 @@ function Note(note) {
   const [visiblity, setVisiblity] = useState(true);
   const deleteNote = async () => {
     const response = await axios.post(
-      "http://localhost:5000/note/delete-note",
+      "http://ec2-52-15-73-37.us-east-2.compute.amazonaws.com:5000/note/delete-note",
       {
         id: note.id,
       }
